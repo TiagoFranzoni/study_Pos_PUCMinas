@@ -1,0 +1,39 @@
+Documentação básica da API 
+
+Orientações gerais:
+Nessa API existem dois tipos de requisições. A API original que possui acesso os dados dentro dela mesma e a API v2 que acessa o Banco de Dados.
+
+• GET:  
+	o /api/produtos 
+	o /api/v2/produtos
+		* Descrição: Retorna uma lista de todos os produtos disponíveis.
+		* Parâmetros: Nenhum.
+		* Resposta: Um array de objetos, cada um representando um produto com os atributos: `id`, `descrição`, `marca` e `preco`.
+
+•	GET:  
+	o	/api/produtos/:id
+	o	/api/v2/produtos/:id
+		* Descrição: Retorna um produto específico com base no ID fornecido.
+		* Parâmetros: `id` - O ID do produto a ser retornado.
+		* Resposta: Um objeto representando o produto com os seguintes atributos: `id`, `descricao`, `marca` e `preco`.
+
+•	POST:  
+	o	/api/produtos
+	o	/api/v2/produtos
+		* Descrição: Adiciona um novo produto à lista de produtos.
+		* Parâmetros: Um objeto no corpo da requisição representando o novo produto com os seguintes atributos: `descricao`, `marca` e `preco`.
+		* Resposta: Um objeto com a mensagem de sucesso e o ID do novo produto adicionado.
+
+•	PUT:  
+	o	/api/produtos/:id
+	o	/api/v2/produtos/:id
+		* Descrição: Atualiza um produto existente com base no ID fornecido.
+		* Parâmetros: `id` - O ID do produto a ser atualizado. Um objeto no corpo da requisição representando as atualizações a serem feitas no produto com os seguintes atributos: `descricao`, `marca` e `preco`.
+		* Resposta: Um objeto com a mensagem de sucesso.
+
+•	DELETE: 
+	o	/api/produtos/:id
+	o	/api/v2/produtos/:id
+		* Descrição: Exclui um produto existente com base no ID fornecido.
+		* Parâmetros: `id` - O ID do produto a ser excluído.
+		* Resposta: Um objeto com a mensagem de sucesso.
